@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Home from './components/Home'
 import Header from './components/Header'
@@ -32,7 +31,7 @@ export default class App extends Component {
                 </div>
                 <div className="row">
                     <div className="col-xs-4  col-offset-8">
-                        <Home>
+                        <Home age={12}>
                             <p>this is my child</p>
                         </Home>
                     </div>
