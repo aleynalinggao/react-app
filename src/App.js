@@ -5,6 +5,9 @@ import Header from './components/Header'
 import Footer from './components/Footer';
 
 export default class App extends Component {
+    greetAge(age){
+        alert(age);
+    }
     render() {
         const classInfo = {
             teacher: "Teacher Wang",
@@ -32,7 +35,7 @@ export default class App extends Component {
                 </div>
                 <div className="row">
                     <div className="col-xs-4  col-offset-8">
-                        <Home age={12}>
+                        <Home age={12} greetAge={this.greetAge} >
                             <p>this is my child</p>
                         </Home>
                     </div>

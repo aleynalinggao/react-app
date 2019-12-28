@@ -21,6 +21,9 @@ export default class Home extends Component {
         }) 
         console.log(this.age);
     }
+    handleAge(){
+        this.props.greetAge(this.state.age);
+    }
     render() {
         return (
             <div className="container">
@@ -35,6 +38,7 @@ export default class Home extends Component {
                 <div className="row">
                     <div className="col-xs-1  col-offset-11">
                         <button onClick={() => { this.changeAge() }} className="btn btn-primary">change my name</button>
+                        <button onClick={this.handleAge.bind(this)} className="btn btn-primary">Send my age</button>
                     </div>
                 </div>
             </div>
