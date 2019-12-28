@@ -7,6 +7,7 @@ export default class Home extends Component {
           <div className="row">
               <div className="col-xs-4  col-offset-8">
                   <h2>Home's page</h2>
+                  {this.props.children}
               </div>
           </div>
         </div>
