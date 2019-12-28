@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Home from './components/Home'
 import Header from './components/Header'
+import Footer from './components/Footer';
 
 export default class App extends Component {
     render() {
@@ -39,6 +40,11 @@ export default class App extends Component {
                 <div className="row">
                     <div className="col-xs-4  col-offset-8">
                         <Header name={"Aleyna"} age={12} classInfo={classInfo} />
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-xs-4  col-offset-8">
+                        <Footer />
                     </div>
                 </div>
             </div>

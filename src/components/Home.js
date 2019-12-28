@@ -4,8 +4,14 @@ export default class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            age: props.age
+            age: props.age,
+            status: 0
         }
+        setTimeout(() => {
+            this.setState({
+                status: this.state.status+1
+            })
+        },1000);
         this.age = this.props.age;
     }
     changeAge() {
@@ -23,6 +29,7 @@ export default class Home extends Component {
                         <h2>Home's page</h2>
                         {this.props.children}
                         <p>here shows the age change : {this.state.age}</p>
+                        <p>Status: {this.state.status}</p>
                     </div>
                 </div>
                 <div className="row">
