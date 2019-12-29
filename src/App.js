@@ -5,8 +5,19 @@ import Header from './components/Header'
 import Footer from './components/Footer';
 
 export default class App extends Component {
+    constructor(){
+        super();
+        this.state = {
+            mName:"Home"
+        }
+    }
     greetAge(age){
         alert(age);
+    }
+    getName(newName){
+        this.setState({
+            mName:newName
+        });
     }
     render() {
         const classInfo = {
@@ -42,12 +53,12 @@ export default class App extends Component {
                 </div>
                 <div className="row">
                     <div className="col-xs-4  col-offset-8">
-                        <Header name={"Aleyna"} age={12} classInfo={classInfo} />
+                        <Header name={"Aleyna"} age={12} classInfo={classInfo} getName={this.getName.bind(this)}/>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-xs-4  col-offset-8">
-                        <Footer />
+                        <Footer getName={this.state.mName}/>
                     </div>
                 </div>
             </div>
